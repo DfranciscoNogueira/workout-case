@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "89fbe7fe-d9bb-4eda-86cb-4c9c8cdbd432",
+		"name": "workout-case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37803682"
+	},
+	"item": [
+		{
+			"name": "Realizar Pedido",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pedidos\": [\r\n    {\r\n      \"pedido_id\": 1,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"PS5\", \"dimensoes\": {\"altura\": 40, \"largura\": 10, \"comprimento\": 25}},\r\n        {\"produto_id\": \"Volante\", \"dimensoes\": {\"altura\": 40, \"largura\": 30, \"comprimento\": 30}}\r\n      ]\r\n    },\r\n    {\r\n      \"pedido_id\": 2,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"Joystick\", \"dimensoes\": {\"altura\": 15, \"largura\": 20, \"comprimento\": 10}},\r\n        {\"produto_id\": \"Fifa 24\", \"dimensoes\": {\"altura\": 10, \"largura\": 30, \"comprimento\": 10}},\r\n        {\"produto_id\": \"Call of Duty\", \"dimensoes\": {\"altura\": 30, \"largura\": 15, \"comprimento\": 10}}\r\n      ]\r\n    },\r\n    {\r\n      \"pedido_id\": 3,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"Headset\", \"dimensoes\": {\"altura\": 25, \"largura\": 15, \"comprimento\": 20}}\r\n      ]\r\n    },\r\n    {\r\n      \"pedido_id\": 4,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"Mouse Gamer\", \"dimensoes\": {\"altura\": 5, \"largura\": 8, \"comprimento\": 12}},\r\n        {\"produto_id\": \"Teclado Mecânico\", \"dimensoes\": {\"altura\": 4, \"largura\": 45, \"comprimento\": 15}}\r\n      ]\r\n    },\r\n    {\r\n      \"pedido_id\": 5,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"Cadeira Gamer\", \"dimensoes\": {\"altura\": 120, \"largura\": 60, \"comprimento\": 70}}\r\n      ]\r\n    },\r\n    {\r\n      \"pedido_id\": 6,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"Webcam\", \"dimensoes\": {\"altura\": 7, \"largura\": 10, \"comprimento\": 5}},\r\n        {\"produto_id\": \"Microfone\", \"dimensoes\": {\"altura\": 25, \"largura\": 10, \"comprimento\": 10}},\r\n        {\"produto_id\": \"Monitor\", \"dimensoes\": {\"altura\": 50, \"largura\": 60, \"comprimento\": 20}},\r\n        {\"produto_id\": \"Notebook\", \"dimensoes\": {\"altura\": 2, \"largura\": 35, \"comprimento\": 25}}\r\n      ]\r\n    },\r\n    {\r\n      \"pedido_id\": 7,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"Jogo de Cabos\", \"dimensoes\": {\"altura\": 5, \"largura\": 15, \"comprimento\": 10}}\r\n      ]\r\n    },\r\n    {\r\n      \"pedido_id\": 8,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"Controle Xbox\", \"dimensoes\": {\"altura\": 10, \"largura\": 15, \"comprimento\": 10}},\r\n        {\"produto_id\": \"Carregador\", \"dimensoes\": {\"altura\": 3, \"largura\": 8, \"comprimento\": 8}}\r\n      ]\r\n    },\r\n    {\r\n      \"pedido_id\": 9,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"Tablet\", \"dimensoes\": {\"altura\": 1, \"largura\": 25, \"comprimento\": 17}}\r\n      ]\r\n    },\r\n    {\r\n      \"pedido_id\": 10,\r\n      \"produtos\": [\r\n        {\"produto_id\": \"HD Externo\", \"dimensoes\": {\"altura\": 2, \"largura\": 8, \"comprimento\": 12}},\r\n        {\"produto_id\": \"Pendrive\", \"dimensoes\": {\"altura\": 1, \"largura\": 2, \"comprimento\": 5}}\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/pedidos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/autenticao/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"autenticao",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status Sala",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/escola/salas/status",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"escola",
+						"salas",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Horas Professor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0ODAxMzE2NSwiZXhwIjoxNzQ4MDE2NzY1fQ.kWgUZrOyuloe2zSrH74XTBigaWdEOBolHjBhb-x5Ctc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/escola/professores/horas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"escola",
+						"professores",
+						"horas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
